@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 `include "counter.v"
-module c_tb();
+module counter_tb();
     parameter len = 8;
     reg clk,reset,c_en,p_load;
     reg [len-1:0] p_load_data;
@@ -13,7 +13,7 @@ module c_tb();
 	end
     end
     initial begin 
-        $dumpfile("counter_tb.vcd");
+    $dumpfile("counter_tb.vcd");
 	$dumpvars(0,counter_tb);
         clk = 0;
 	reset = 1;
